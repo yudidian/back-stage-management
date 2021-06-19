@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <link rel="stylesheet" href="./assets/css/login.css">
+    <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
+    <script src="./assets/lib/jquery.js"></script>
+</head>
+
+<body>
+    <div class="logo layui-main">
+        <img src="./assets/images/logo.png" alt="">
+    </div>
+    <!-- 登录部分 -->
+    <div class="login">
+        <form class="layui-form" action="">
+            <div class="layui-form-item">
+                <div class="title"></div>
+            </div>
+            <div class="layui-form-item">
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input"\>
+            </div>
+            <div class="layui-form-item">
+                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input"\>
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn layui-btn-normal layui-btn-fluid">登录</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
