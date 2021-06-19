@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>登录页面</title>
-    <link rel="stylesheet" href="./assets/css/login.css">
     <link rel="stylesheet" href="./assets/lib/layui/css/layui.css">
-    <script src="./assets/lib/jquery.js"></script>
+    <link rel="stylesheet" href="./assets/css/login.css">
+
 </head>
 
 <body>
@@ -22,16 +22,23 @@
                 <div class="title"></div>
             </div>
             <div class="layui-form-item">
-                <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名" autocomplete="off" class="layui-input"\>
+                <i class="layui-icon layui-icon-username"></i>
+                <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
+                    autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-item">
-                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码" autocomplete="off" class="layui-input"\>
+                <i class="layui-icon layui-icon-password"></i>
+                <input type="password" name="password" required lay-verify="required|pass" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input">
             </div>
             <div class="layui-form-item">
-                <button class="layui-btn layui-btn-normal layui-btn-fluid">登录</button>
+                <button class="layui-btn layui-btn-normal layui-btn-fluid" lay-submit>登录</button>
             </div>
         </form>
     </div>
 </body>
+<script src="./assets/lib/layui/layui.js"></script>
+<script src="./assets/lib/jquery.js"></script>
+<script src="./assets/js/login.js"></script>
 
 </html>
