@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html style="height: 100%">
+<head>
+<meta charset="utf-8">
+<title>仓库管理-出入库情况</title>
+<link rel="stylesheet" href="https://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.css">
+<link href="css/materialdesignicons.min.css" rel="stylesheet">
+<style>
+	body{
+		background-color: #191E40;
+		overflow-x: hidden; 
+	}
+	table th{
+		font-size: 16px;
+		text-align: center;
+		top: 0;
+		background-color: #191E40;
+		color:#ffffff;
+	}
+	/* 头像相关 */
+	.img-avatar {
+		margin-top: 10px!important;
+	    display: inline-block !important;
+	    text-align: center;
+	    border-radius: 50%;
+	}
+	.img-avatar-48 {
+	    width: 58px;
+	    height: 58px;
+	    line-height: 65px;
+	}
+	.bg-translucent {
+	    background-color: rgba(255, 255, 255, 0.175)
+	}
+	.fa-1-5x {
+		font-size: 1.5em;
+	}
+	.next:hover,.pre:hover{
+		background-color: #e7e7e7;
+	}
+</style>
+</head>
+<body style="height: 100%; margin: 0;">
+	<div style="height: 100%;">
+		<!-- 标题 -->
+		<div style="height: 4%;text-align: center;color: white;">
+			<h3 >果乐后台数据中心</h3>
+		</div>
+		<!-- 第一排图表 -->
+		<div class="row" style="height: 96%;">
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height: 100%">
+				<div id="container1-1" style="height: 100%"></div>
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="height: 106px;margin-top: 20px;margin-right: -12px;">
+				<div class="thumbnail" style="height: 100%;background-color: #33cabb;border-color:#33cabb;margin-left: -15px;">
+				  <div class="caption" style="height: 100%;color: white;">
+					  <div class="pull-left">
+						  <span class="img-avatar img-avatar-48 bg-translucent">
+							  <i class="glyphicon glyphicon-log-in fa-1-5x"></i>
+						  </span> 
+					  </div>
+					  <div class="pull-right" >
+					    <p class="h5 text-white m-t-0">今日销售量</p>
+					    <p class="h3 text-white m-b-0">523</p>
+					  </div>
+				  </div>
+				</div> 
+			</div>
+			<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12" style="height: 106px;margin-top: 20px;">
+				<div class="thumbnail" style="height: 100%;background-color: #bd4edf;border-color:#cd54f1;">
+				  <div class="caption" style="height: 100%;color: white;">
+					  <div class="pull-left" >
+						  <span class="img-avatar img-avatar-48 bg-translucent">
+							  <i class="glyphicon glyphicon-log-out fa-1-5x"></i>
+						  </span> 
+					  </div>
+					  <div class="pull-right" >
+					    <p class="h5 text-white m-t-0">今日进货量</p>
+					    <p class="h3 text-white m-b-0">123</p>
+					  </div>
+				  </div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12" style="height: 70%;margin-top: 20px;">
+				<table class="table" id="tableId" style="color: #ffffff;text-align: center;">
+					<thead>
+						<tr>
+							<th>商品名称</th>
+							<th>产品类型</th>
+							<th>收货地点</th>
+							<th>时间</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>哈密瓜</td>
+							<td>生鲜水果</td>
+							<td>
+								<span class="label" style="background-color: #08caaa;color: white;">四川民族学院A区</span>
+							</td>
+							<td>2021/6/22</td>
+						</tr>
+						<tr>
+							<td>车厘子</td>
+							<td>生鲜水果</td>
+							<td>
+								<span class="label" style="background-color: #cd54f1;color: white;">四川民族学院A区</span>
+							</td>
+							<td>2021/6/22</td>
+						</tr>
+						<tr>
+							<td>香蕉片</td>
+							<td>水果制品</td>
+							<td>
+								<span class="label" style="background-color: #08caaa;color: white;">四川民族学院A区</span>
+							</td>
+							<td>2021/6/22</td>
+						</tr>
+						<tr>
+							<td>黄桃罐头</td>
+							<td>水果制品</td>
+							<td>
+								<span class="label" style="background-color: #cd54f1;color: white;">四川民族学院B区</span>
+							</td>
+							<td>2021/6/22</td>
+						</tr>
+						<tr>
+							<td>青芒</td>
+							<td>生鲜水果</td>
+							<td>
+								<span class="label" style="background-color: #08caaa;color: white;">四川民族学院A区</span>
+							</td>
+							<td>2021/6/22</td>
+						</tr>
+						<tr>
+							<td>学院定制</td>
+							<td>生鲜水果</td>
+							<td>
+								<span class="label" style="background-color: #cd54f1;color: white;">四川民族学院B区</span>
+							</td>
+							<td>2020/2/18</td>
+						</tr>
+						<tr>
+							<td>班级订制</td>
+							<td>水果套餐</td>
+							<td>
+								<span class="label" style="background-color: #08caaa;color: white;">四川民族学院A区</span>
+							</td>
+							<td>2021/6/22</td>
+						</tr>
+						<tr>
+							<td>哈密瓜</td>
+							<td>生鲜水果</td>
+							<td>
+								<span class="label" style="background-color: #cd54f1;color: white;">四川民族学院A区</span>
+							</td>
+							<td>2021/6/22</td>
+						</tr>
+						<tr>
+							<td>私人订制</td>
+							<td>水果套餐</td>
+							<td>
+								<span class="label" style="background-color: #08caaa;color: white;">四川民族学院B区</span>
+							</td>
+							<td>2021/6/22</td>
+						</tr>
+						<tr>
+							<td>私人订制</td>
+							<td>水果套餐</td>
+							<td>
+								<span class="label" style="background-color: #cd54f1;color: white;">四川民族学院B区</span>
+							</td>
+							<td>2021/6/22</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+<script src="https://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script src="https://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts/dist/echarts.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-gl/dist/echarts-gl.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/echarts-stat/dist/ecStat.min.js"></script>
+<script type="text/javascript">
+	
+	$(function(){
+		$(".pre").click(function(){
+			location="仓库管理看板final.html"
+		})
+		$(".next").click(function(){
+			location="仓库管理-物料情况.html"
+		})
+	})
+	// Generate data
+	var category = [];
+	var dottedBase = +new Date();
+	var lineData = [];
+	var barData1 = [];
+	var barData2 = [];
+	for (var i = 0; i < 31; i++) {
+	    var date = new Date(dottedBase += 1000 * 3600 * 24);
+		/* if(date.getMonth() -1 == 0){
+			category.push([
+			    date.getFullYear() ,
+			    date.getMonth() ,
+			    date.getDate()
+			].join('/')); 
+		}else{
+			category.push([
+			    date.getFullYear()-1, 
+			    date.getMonth()+ 12,
+			    date.getDate()
+			].join('/'));
+		} */
+	    // if (i<=10&&i>=1){
+	    //     category.push(i);
+	    // }
+		category.push([
+		    date.getFullYear() ,
+		    date.getMonth() ,
+		    date.getDate()-2
+		].join('/')); 
+	    var b = (Math.random() * 200).toFixed();
+	    var d = (Math.random() * (-200)).toFixed();
+	    barData1.push(b)
+	    barData2.push(d)
+	}
+	
+	var dom = document.getElementById("container1-1");
+	// dom.style.height=window.innerHeight+'px';
+	var myChart = echarts.init(dom);
+	var app = {};
+	option = null;
+	// option
+	option = {
+		title:{
+			text:'月销售和进货记录',
+			textStyle:{
+				color:'#FFFFFF',
+			}
+		},
+		grid: {
+		    left: '2%',
+		    right: '4%',
+		    bottom: '10%',
+		    containLabel: true
+		},
+	    tooltip: {
+	        trigger: 'axis',
+			// formatter:'{a}:{c0}<br/>{a1}:{c1}',
+			backgroundColor:'#5bc0de',
+			textStyle:{
+			    color:'#ffffff',
+			    fontSize:18,
+			    fontWeight:'normal',
+			},
+	        axisPointer: {
+	            type: 'shadow',
+	            label: {
+	                show: true,
+					fontSize:16,
+	                backgroundColor: '#CA4040'
+	            }
+	        }
+	    },
+	    legend: {
+	        data: ['销售数量','进货数量'],
+	        textStyle: {
+	            color: '#ffffff',
+				fontSize:16
+	        }
+	    },
+	    xAxis: {
+	         type: 'category',
+	        data: category,
+	        axisTick: {
+	            alignWithLabel: true
+	        },
+	       
+	        splitLine: {
+	                show: false,
+	               
+	            },
+	        axisLabel:{
+	                //fontWeight:10,
+	                //interval:2,
+	                fontsize:2,
+	                align:'center',
+	                color:'rgba(255,255,255,0.3)'
+	            }
+	    },
+	     yAxis: [{
+	        type: 'value',
+	        splitLine: {
+	                show: true,
+	                lineStyle:{
+	                    color:'rgba(255,255,255,0.2)'
+	                }
+	            },
+	            axisLine:{
+	                show:false
+	            },
+	            axisLabel:{
+	               
+	                fontWeight:10,
+	                fontsize:5,
+	               color:'rgba(255,255,255,0.3)'
+	            }
+	            
+	    }],
+	    series: [{
+	        name: '进货数量',
+	        type: 'bar',
+	        stack: '总量',
+	        barWidth: 12,
+	        itemStyle: {
+	            normal: {
+	                barBorderRadius: 50,
+	                color: new echarts.graphic.LinearGradient(
+	                    0, 0, 0, 1,
+	                    [
+	                        {offset: 1, color: '#0b8eca'},
+	                        {offset: 0, color: '#08caaa'}	
+	                    ]
+	                )
+	            }
+	        },
+			/* label: {
+			    normal: {
+			        show: true,
+			        lineHeight: 30,
+			        width: 80,
+			        height: 30,
+			        backgroundColor: '#5cb85c',
+			        borderRadius: 200,
+			        position: ['-8', '-60'],
+			        distance: 1,
+			        formatter: [
+			            '    {d|●}',
+			            ' {a|{c}}     \n',
+			            '    {b|}'
+			        ].join(''),
+			        rich: {
+			            d: {
+			                color: '#3CDDCF',
+			            },
+			            a: {
+			                color: '#fff',
+			                align: 'center',
+			            },
+			            b: {
+			                width: 1,
+			                height: 30,
+			                borderWidth: 1,
+			                borderColor: '#234e6c',
+			                align: 'left'
+			            },
+			        }
+			    }
+			}, */
+	        data: barData1
+	    },{
+	        name: '销售数量',
+	        type: 'bar',
+	        stack: '总量',
+	        barWidth: 12,
+	        itemStyle: {
+	            normal: {
+	                barBorderRadius: 50,
+	                color: new echarts.graphic.LinearGradient(
+	                    0, 0, 0, 1,
+	                    [
+	                        {offset: 1, color: '#EF71FF'},
+	                        {offset: 0, color: '#953eaf'}
+	                    ]
+	                )
+	            }
+	        },
+	        data: barData2
+	    }]
+	};
+	var app = {
+	   currentIndex: -1,
+	};
+	setInterval(function () {
+		var dataLen = option.series[0].data.length;
+		// 取消之前高亮的图形
+		myChart.dispatchAction({
+		  type: 'downplay',
+		  seriesIndex: 0,
+		  dataIndex: app.currentIndex
+		});
+		app.currentIndex = (app.currentIndex + 1) % dataLen;
+		//console.log(app.currentIndex);
+		// 高亮当前图形
+		myChart.dispatchAction({
+		  type: 'highlight',
+		  seriesIndex: 0,
+		  dataIndex: app.currentIndex,
+		});
+		// 显示 tooltip
+		myChart.dispatchAction({
+		  type: 'showTip',
+		  seriesIndex: 0,
+		  dataIndex: app.currentIndex
+		});
+	}, 3000);
+	
+	// 参数1 tableID,参数2 div高度，参数3 速度，参数4 tbody中tr几条以上滚动
+	tableScroll('tableId', 200, 60, 5)
+	var MyMarhq;
+	
+	function tableScroll(tableid, hei, speed, len) {
+	    clearTimeout(MyMarhq);
+	    $('#' + tableid).parent().find('.tableid_').remove()
+	    $('#' + tableid).parent().prepend(
+	        '<table class="tableid_"><thead>' + $('#' + tableid + ' thead').html() + '</thead></table>'
+	    ).css({
+	        'position': 'relative',
+	        'overflow': 'hidden'
+	        // 'height': hei + 'px'
+	    })
+	    $(".tableid_").find('th').each(function(i) {
+	        $(this).css('width', $('#' + tableid).find('th:eq(' + i + ')').width());
+	    });
+	    $(".tableid_").css({
+	        'position': 'absolute',
+	        'top': 0,
+	        'left': 0,
+	        'z-index': 9,
+			'width': '100%',
+	    })
+	    $('#' + tableid).css({
+	        'position': 'absolute',
+	        'top': 0,
+	        'left': 0,
+	        'z-index': 1
+	    })
+	
+	    if ($('#' + tableid).find('tbody tr').length > len) {
+	        $('#' + tableid).find('tbody').html($('#' + tableid).find('tbody').html() + $('#' + tableid).find('tbody').html());
+	        $(".tableid_").css('top', 0);
+	        $('#' + tableid).css('top', 0);
+	        var tblTop = 0;
+	        var outerHeight = $('#' + tableid).find('tbody').find("tr").outerHeight();
+	
+	        function Marqueehq() {
+	            if (tblTop <= -outerHeight * $('#' + tableid).find('tbody').find("tr").length) {
+	                tblTop = 0;
+	            } else {
+	                tblTop -= 1;
+	            }
+	            $('#' + tableid).css('margin-top', tblTop + 'px');
+	            clearTimeout(MyMarhq);
+	            MyMarhq = setTimeout(function() {
+	                Marqueehq()
+	            }, speed);
+	        }
+	
+	        MyMarhq = setTimeout(Marqueehq, speed);
+	        $('#' + tableid).find('tbody').hover(function() {
+	            clearTimeout(MyMarhq);
+	        }, function() {
+	            clearTimeout(MyMarhq);
+	            if ($('#' + tableid).find('tbody tr').length > len) {
+	                MyMarhq = setTimeout(Marqueehq, speed);
+	            }
+	        })
+	    }
+	}
+	
+	// setTimeout(function(){
+	// 	location="仓库管理看板1final.html"
+	// },30000)
+	
+	if (option && typeof option === "object") {
+	 	myChart.setOption(option, true);
+	}
+	// if (option1 && typeof option1 === "object") {
+	// 	myChart1.setOption(option1, true);
+	// }
+	// if (option2 && typeof option2 === "object") {
+	// 	myChart2.setOption(option2, true);
+	// }
+	// if (option3 && typeof option3 === "object") {
+	// 	myChart3.setOption(option3, true);
+	// }
+	window.onresize = function(){
+		myChart.resize();
+		// myChart1.resize();
+		// myChart2.resize();
+		// myChart3.resize();
+	}
+</script>
+</body>
+</html>
