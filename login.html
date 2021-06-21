@@ -35,7 +35,13 @@
                     autocomplete="off" class="layui-input" id="password">
             </div>
             <div class="layui-form-item">
-                <button class="layui-btn layui-btn-normal layui-btn-fluid" lay-submit id="btn-login">登录</button>
+                <input type="text" name="check" required lay-verify="required" placeholder="验证码"
+                    autocomplete="off" class="layui-input" id="check"/>
+                <div class="checkImg"></div>
+                <a href="javascript:;" class="change">看不清换一张</a>
+            </div>
+            <div class="layui-form-item">
+                <button class="layui-btn layui-btn-normal layui-btn-fluid" lay-submit id="btn-login" lay-filter="login">登录</button>
             </div>
         </form>
     </div>

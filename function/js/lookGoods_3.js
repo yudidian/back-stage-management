@@ -94,3 +94,20 @@ $(function () {
         return time;
       }
 })
+$(function () {
+    let layer = layui.layer;
+    loginCheck();
+    function loginCheck() {
+      $.ajax({
+        type: "get",
+        url: "/my/success",
+        complete: function (res) {
+          console.log(res.responseJSON.status);
+          if (res.responseJSON.status !== 0) {
+              localStorage.removeItem('token')
+              window.location.href ='../../login.html';
+          }
+        }
+      });
+    }
+  })

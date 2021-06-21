@@ -16,3 +16,20 @@
     height: 100%;
     overflow: hidden;
 }
+.layui-icon{
+    margin-right: 8px;
+}
+.layui-nav-child .layui-icon{
+    margin-left: 20px;
+}
+#username .layui-icon{
+    margin-right: 0;
+}
+.headTitle{
+    height: 60px;
+    color: #fff;
+    line-height: 60px;
+    font-size: 28px;
+    margin-left: 164px;
+    text-align: center;
+}
